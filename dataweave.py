@@ -130,7 +130,8 @@ upto 10
 def tenIteamLeastPrice(data):
     remove_none = [i for i in data if i["available_price"] != None]
     sorted_list = sorted(remove_none, key=lambda x: float(x["available_price"]))
-    print(sorted_list[:10])
+    for itm in sorted_list[:10]:
+        print(itm["title"] + "-->" + itm["available_price"])
 
 
 """# 8. Display the top 5 subcategory having highest items."""
